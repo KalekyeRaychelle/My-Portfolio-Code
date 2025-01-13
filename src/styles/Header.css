@@ -1,0 +1,90 @@
+
+.header{
+    height:100px;
+    width:100%;
+    background-color:#de430f;
+    border-bottom: #982b07 2px solid;
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Lato", serif;
+}
+.header:hover{
+    background-color: #982b07;
+    .leftSide h2{
+        color:white;
+    }
+    .myResume button{
+        border: #de430f 2px solid;
+    }
+}
+.leftSide h2{
+    color:white;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.sections{
+    display: flex;
+    list-style: none;
+}
+.sections a{
+    padding-right:10px;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.sections a:hover{
+    color:black;
+    transform:translateY(-3px);
+}
+.myResume button{
+    border: #982b07 2px solid;
+    border-radius:4px;
+    font-size:15px;
+    background-color:transparent;
+    padding: 7px 7px 7px 7px;
+    color:white;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    box-shadow: inset 0 0 0 0  #008CBA;
+}
+.myResume button:hover{
+    box-shadow: inset 135px 0 0 0 #008CBA;
+    cursor: pointer;
+    transform: translateY(-5px);
+    color:black;
+    border-radius:4px;
+}
+@media(max-width:768px){
+    
+.leftSide h2{
+    color:white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.sections a{
+    padding-right:5px;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.myResume button{
+    border: #982b07 2px solid;
+    border-radius:4px;
+    font-size:15px;
+    background-color:transparent;
+    padding: 5px 5px 5px 5px;
+    color:white;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    box-shadow: inset 0 0 0 0  #008CBA;
+   
+
+}
+}
