@@ -15,9 +15,7 @@ return(
         </ul>
         
     </div>
-    <div className='myResume'>
-        <button>MY RESUME</button>
-    </div>
+    
  </div>
 );
 }

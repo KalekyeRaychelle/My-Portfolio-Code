@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.LandingPage{
+    background-image: url('../assets/background.png');
+}
+.topSide{
+ padding-top:8%;
+
+}
+.nextHeading{
+    font-size:45px;
+    position:absolute;
+    top:40%;
+    left:25%;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Lato", serif;
+    color:black;
+
+    
+}.text {
+    display: inline-block;
+}
+
+.letter {
+    display: inline-block;
+    transform: translateY(0);
+    color: black;
+    animation: animateLetter 2s ease forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Combined animation for moving up, changing color, and resetting */
+@keyframes animateLetter {
+    0% {
+        transform: translateY(0);
+        color: black;
+    }
+    30% {
+        transform: translateY(-10px);
+        color: #de430f;
+    }
+    60% {
+        transform: translateY(-10px);
+        color: #de430f;
+    }
+    100% {
+        transform: translateY(0);
+        color: black;
+    }
+}
+
+.topHeading{
+    font-size:50px;
+    position:absolute;
+    top:28%;
+    left:20%;
+    font-family: "Lato", serif;
+    font-weight:800;
+    color:black;
+    
+}
+
+.myResume button{
+    border: #982b07 2px solid;
+    border-radius:4px;
+    font-size:15px;
+    position:absolute;
+    top:65%;
+    left:45%;
+    background-color:transparent;
+    padding: 7px 7px 7px 7px;
+    color:black;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    box-shadow: inset 0 0 0 0  #008CBA;
+}
+.myResume button:hover{
+    box-shadow: inset 135px 0 0 0 #de430f;
+    cursor: pointer;
+    transform: translateY(-5px);
+    color:black;
+    border-radius:4px;
+}
+@media(max-width:760px){
+        
+    .nextHeading{
+        font-size:30px;
+        position:absolute;
+        top:45%;
+        left:10%;
+        font-family: "Lato", serif;
+        
+        
+    }
+    .topHeading{
+        font-size:39px;
+        position:absolute;
+        top:28%;
+        left:6%;
+        font-family: "Lato", serif;
+        font-weight:800
+    }
+        
+    .myResume button{
+        border: #982b07 2px solid;
+        border-radius:4px;
+        font-size:15px;
+        position:absolute;
+        top:65%;
+        left:30%;
+        background-color:transparent;
+        padding: 7px 7px 7px 7px;
+        color:black;
+        transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        box-shadow: inset 0 0 0 0  #008CBA;
+    }
+}
