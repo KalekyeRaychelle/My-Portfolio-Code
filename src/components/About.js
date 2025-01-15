@@ -1,9 +1,19 @@
 import React from 'react';
 import '../styles/About.css';
+import {motion} from 'framer-motion';
+import {fadeIn} from '../variants'
+
 const About= ()=>{
     return(
-     <div className="about">
-       
+
+        <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+        className="about"
+      >
+        <img width="96" height="96" src="https://img.icons8.com/windows/96/FD7E14/user.png" alt="user"/>
         <div className="short paragraph">
             <p>
                 I am an aspiring web developer passionate in creating user-friendly websites. I am proficient in backend framework Express.js 
@@ -13,8 +23,10 @@ const About= ()=>{
                 push myself to explore new environments.
             </p>
         </div>
-     </div>
-    );
-    }
-    export default About;
+
+    
+    </motion.div>
+    )
+}
+export default About;
     

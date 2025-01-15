@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 import '../styles/Header.css'
 const Header= ()=>{
 return(
@@ -9,9 +10,9 @@ return(
     </div>
     <div className="rightSide">
         <ul className='sections'>
-            <li><Link to=''>About</Link></li>
-            <li><Link to=''>Projects</Link></li>
-            <li><Link to=''>Contact</Link></li>
+            <li><Link to='About'>About</Link></li>
+            <li><Link to='Projects'>Projects</Link></li>
+            <li><Link to='Contact' >Contact</Link></li>
         </ul>
         
     </div>

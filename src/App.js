@@ -1,15 +1,16 @@
+
 import React from 'react';
-
-import Header from './components/Header';
-import About from './components/About';
 import LandingPage from './components/LandingPage';
-
+import About from './components/About';
+import LoadingPage from './components/LoadingPage';
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
-      
+      <LoadingPage/>
+      <LandingPage />
+    
+      <About />
     </div>
   );
 }

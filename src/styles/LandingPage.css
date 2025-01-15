@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .LandingPage{
-    background-image: url('../assets/background.png');
+    height:100vh;
+    position: relative;
 }
 .topSide{
  padding-top:8%;
@@ -25,15 +26,16 @@
     display: inline-block;
     transform: translateY(0);
     color: black;
-    animation: animateLetter 2s ease forwards;
+    animation: animateLetter 2s ease-in-out infinite;
     animation-fill-mode: forwards;
 }
 
-/* Combined animation for moving up, changing color, and resetting */
+
 @keyframes animateLetter {
     0% {
         transform: translateY(0);
         color: black;
+        
     }
     30% {
         transform: translateY(-10px);
