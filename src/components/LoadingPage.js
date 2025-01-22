@@ -11,7 +11,7 @@ const LoadingPage = () => {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  },[]);
 
   if (!isLoading) {
     return null; 
