@@ -4,6 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tabler/icons-react": "^3.28.1",
     "@tsparticles/react": "^3.0.0",
     "clsx": "^2.1.1",

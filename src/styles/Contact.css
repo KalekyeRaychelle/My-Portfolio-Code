@@ -159,16 +159,42 @@
     .emailForm textarea {
         resize: none; 
     }
-    
+
+
     .socialMedia {
-        gap:10px;
+        display: flex;
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center icons horizontally */
+        gap: 15px;
+        margin-top: 20px; /* Ensure spacing from the form */
+        position: static; /* Remove relative positioning */
     }
 
     .socialMedia a {
-      
-        font-size: 25px;
-        
+        font-size: 30px; /* Adjust icon size */
+        color: #333;
+        transition: color 0.2s, transform 0.2s;
     }
+
+    .socialMedia a:hover {
+        color: #f8ebe6;
+        transform: scale(1.1);
+    }
+    .formAndSocial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .socialMedia {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
 
 
 }

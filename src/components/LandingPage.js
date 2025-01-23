@@ -4,7 +4,9 @@ import canvasDots from './canvasDotsBg';
 
 const LandingPage = () => {
   const text = "full stack web developer";
-
+  const handleClick = () => {
+    window.location.href="https://drive.google.com/file/d/1LqgSUX7DcUYTPtcij0OTBonxlwvUcWjq/view?usp=sharing";
+  }
   useEffect(() => {
     canvasDots();
   }, []); 
@@ -31,10 +33,11 @@ const LandingPage = () => {
         </p>
       </div>
       <div className="myResume">
-        <button onClick={'https://drive.google.com/file/d/1LqgSUX7DcUYTPtcij0OTBonxlwvUcWjq/view?usp=sharing'}>MY RESUME</button>
+        <button  className='resumeButton' onClick={handleClick}>MY RESUME</button>
       </div>
     </div>
   );
 };
+
 
 export default LandingPage;
