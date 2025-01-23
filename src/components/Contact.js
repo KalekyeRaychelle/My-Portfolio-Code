@@ -1,7 +1,5 @@
 import React,{useRef}from 'react';
 import '../styles/Contact.css';
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -43,16 +41,7 @@ const Contact = () => {
             </form>
 
         </div>
-        <div className='socialMedia'>
-          <p>Reach me on:</p>
-
-          <a href='https://github.com/KalekyeRaychelle/' target='_blank' rel='noopener noreferrer'>
-            <FaGithub className='icon' />
-          </a>
-          <a href='https://www.linkedin.com/in/raychelle-kalekye-0825602ba/' target='_blank' rel='noopener noreferrer'>
-            <FaLinkedin className='icon' />
-          </a>
-       </div>
+       
 
       </div>
 

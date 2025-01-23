@@ -5,6 +5,7 @@ import LoadingPage from './components/LoadingPage';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
  
   return (
@@ -21,7 +22,7 @@ function App() {
       <div id='Contact'>
        <Contact/>
       </div>
-      
+      <Footer/>
     </div>
   );
 }

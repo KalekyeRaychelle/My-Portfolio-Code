@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.Footer{
+  
+    font-family: 'Lato', serif;
+    display: flex;
+    flex-direction: row;
+    margin-top:5%;
+    align-items:center;
+}
+.rightSideFooter p{
+  color:#de430f;
+}
+.socialMedia{
+    position:relative;
+    left:25%;
+    display:flex;
+}
+
+.socialMedia a{
+    font-size: 40px;
+    margin-left: 2%;
+    margin-right:15%;
+    color:#333;
+    transition: transform 0.2s, color 0.2s;
+}
+.socialMedia a:hover{
+    color:#de430f; 
+    transform: scale(1.1); 
+}
+@media(max-width:768px){
+    .Footer{
+        margin-top:20%;
+        width:auto;
+    }
+    .socialMedia {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        gap: 10px;
+        margin-top: 20px; 
+        position: static;
+        position:relative;
+        left:10%;
+        margin-bottom:1%;
+        
+    }
+   
+    .socialMedia a {
+        font-size: 30px; 
+        color: #333;
+        transition: color 0.2s, transform 0.2s;
+        margin-bottom: 2%;
+    }
+
+    .socialMedia a:hover {
+        color: #d06135;
+        transform: scale(1.1);
+    }
+}
