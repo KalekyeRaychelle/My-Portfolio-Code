@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .Footer{
-  
+   
     font-family: 'Lato', serif;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
 }
 @media(max-width:768px){
     .Footer{
-        margin-top:20%;
+        margin-top:35%;
         width:auto;
     }
     .socialMedia {
