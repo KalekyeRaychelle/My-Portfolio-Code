@@ -5,7 +5,7 @@ import canvasDots from './canvasDotsBg';
 const LandingPage = () => {
   const text = "full stack web developer";
   const handleClick = () => {
-    window.location.href="https://drive.google.com/file/d/1LqgSUX7DcUYTPtcij0OTBonxlwvUcWjq/view?usp=sharing";
+    window.location.href="https://drive.google.com/file/d/1U47-dpjedXNYfxOJhCiecJclicDrOkz3/view?usp=sharing";
   }
   useEffect(() => {
     canvasDots();
