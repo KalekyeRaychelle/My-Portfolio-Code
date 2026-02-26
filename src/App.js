@@ -4,7 +4,6 @@ import About from './components/About';
 import LoadingPage from './components/LoadingPage';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Header from './components/Header';
 import Footer from './components/Footer';
 function App() {
  
@@ -12,14 +11,13 @@ function App() {
     <div className="App">
       <LoadingPage/>
       <LandingPage/>
-      <Header/>
-      <div id='About'>
+      <div id='about'>
        <About/>
       </div>
-      <div id='Projects'>
+      <div id='projects'>
        <Projects/>
       </div>
-      <div id='Contact'>
+      <div id='contact'>
        <Contact/>
       </div>
       <Footer/>

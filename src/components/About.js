@@ -24,11 +24,15 @@ const About = () => {
     <img src="https://img.icons8.com/windows/96/FD7E14/user.png" alt="user" /><h3>About Me</h3>
       <p>
        I am an Artificial Intelligence Developer specializing in machine learning and natural language processing. I develop and deploy models that power intelligent, real-world applications.
-
+      </p>
+      <p>
        My core stack includes Python, where I build ML pipelines and AI-driven systems, and Flask for designing lightweight, scalable backend services that bring machine learning models into production. I work with modern ML frameworks to develop, fine-tune, and evaluate models with a strong focus on performance and practical deployment.
-
-       Beyond AI, I have a solid foundation in full-stack development, working with React.js, Express.js, SQL, and cloud services. This enables me to build complete end-to-end systems from data processing and model development to API design and user-facing applications.
-
+      </p>
+      <p>
+         Beyond AI, I have a solid foundation in full-stack development, working with React.js, Express.js, SQL, and cloud services. This enables me to build complete end-to-end systems from data processing and model development to API design and user-facing applications.
+      </p>
+      <p>
+        
        I am driven by curiosity and continuous learning, constantly exploring emerging technologies to build scalable and responsible AI systems that create meaningful impact.
 
       </p>
