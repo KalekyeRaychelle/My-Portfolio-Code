@@ -1,128 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --pink-light: #fce4ec;
+  --pink-mid: #f48fb1;
+  --pink-deep: #c2185b;
+  --pink-dark: #880e4f;
+  --rose: #e91e63;
+  --cream: #fff9fb;
+  --text: #1a0a10;
+  --muted: #7a4a5a;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  background: radial-gradient(circle at 50% -20%, #fffefe 0%, var(--cream) 48%, #fff1f7 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
 .LandingPage {
-    height: 100vh;
-    position: relative;
-    overflow: hidden; 
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 88px;
+  isolation: isolate;
+}
+
+.hero-blob {
+  --blob-transform: translate3d(0, 0, 0);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  transform: var(--blob-transform) translateY(0);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero-blob-one {
+  width: 360px;
+  height: 360px;
+  top: -110px;
+  right: -90px;
+  background: var(--pink-light);
+  animation-duration: 8s;
+}
+
+.hero-blob-two {
+  width: 420px;
+  height: 420px;
+  bottom: -170px;
+  left: -130px;
+  background: var(--pink-mid);
+  animation-duration: 10s;
+  animation-delay: -1.5s;
+}
+
+.hero-blob-three {
+  --blob-transform: translate(-50%, -50%);
+  width: 310px;
+  height: 310px;
+  top: 48%;
+  left: 50%;
+  background: var(--pink-deep);
+  animation-duration: 6s;
+  animation-delay: -0.7s;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  transform: translateY(-24px);
+}
+
+.hero-fade {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-label {
+  margin: 0;
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  animation-delay: 0.2s;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.92;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  animation-delay: 0.4s;
+}
+
+.hero-title em {
+  color: var(--rose);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.6vw, 1.45rem);
+  font-weight: 400;
+  animation-delay: 0.6s;
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--rose);
+  border-right: 1px solid var(--rose);
+  padding-right: 4px;
+  animation: blink 0.8s step-end infinite;
+}
+
+.hero-buttons {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  animation-delay: 0.8s;
+}
+
+.hero-button {
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.hero-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--rose), var(--pink-dark));
+  box-shadow: 0 16px 30px rgba(194, 24, 91, 0.3);
+}
+
+.hero-button-primary:hover {
+  transform: translateY(-3px);
+  color: var(--rose);
+  background: transparent;
+  border-color: var(--rose);
+  box-shadow: 0 18px 36px rgba(194, 24, 91, 0.36);
+}
+
+.hero-button-secondary {
+  color: var(--rose);
+  background: transparent;
+  border-color: var(--rose);
+}
+
+.hero-button-secondary:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  background: var(--rose);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  animation-delay: 1.4s;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 52px;
+  background: var(--rose);
+  animation: scrollPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
-  
-  .canvas-2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
-  }
-  
-.topSide {
-    padding-top: 8%;
-}
-
-.topHeading {
-    font-size: 50px;
-    position: absolute;
-    top: 28%;
-    left: 20%;
-    font-family: "Lato", serif;
-    font-weight: 800;
-    color: black;
-    z-index: 1; 
-}
-
-.nextHeading {
-    font-size: 45px;
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    font-weight: 400;
-    font-style: italic;
-    font-family: "Lato", serif;
-    color: black;
-    z-index: 1; 
-}
-
-.text {
-    display: inline-block;
-}
-
-.letter {
-    display: inline-block;
+  to {
+    opacity: 1;
     transform: translateY(0);
-    color: black;
-    animation: animateLetter 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
+  }
 }
 
-@keyframes animateLetter {
-    0% {
-        transform: translateY(0);
-        color: black;
-    }
-    30% {
-        transform: translateY(-10px);
-        color: #de430f;
-    }
-    60% {
-        transform: translateY(-10px);
-        color: #de430f;
-    }
-    100% {
-        transform: translateY(0);
-        color: black;
-    }
+@keyframes float {
+  0%,
+  100% {
+    transform: var(--blob-transform) translateY(0);
+  }
+  50% {
+    transform: var(--blob-transform) translateY(-26px);
+  }
 }
 
-.myResume button {
-    border: #982b07 2px solid;
-    border-radius: 4px;
-    font-size: 15px;
-    position: absolute;
-    top: 65%;
-    left: 45%;
-    background-color: transparent;
-    padding: 7px 7px 7px 7px;
-    color: black;
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-    box-shadow: inset 0 0 0 0 #008CBA;
-    z-index: 1; 
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
 }
 
-.myResume button:hover {
-    box-shadow: inset 135px 0 0 0 #de430f;
-    cursor: pointer;
-    transform: translateY(-5px);
-    color: black;
-    border-radius: 4px;
+@keyframes blink {
+  0%,
+  100% {
+    border-color: var(--rose);
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
-@media (max-width: 760px) {
-    .nextHeading {
-        font-size: 30px;
-        position: absolute;
-        top: 45%;
-        padding-top:20px;
-        left: 10%;
-        font-family: "Lato", serif;
-    }
+@media (max-width: 768px) {
+  .LandingPage {
+    padding-top: 112px;
+  }
 
-    .topHeading {
-        font-size: 39px;
-        position: absolute;
-        top: 28%;
-        left: 6%;
-        padding-bottom:10px;
-        font-family: "Lato", serif;
-        font-weight: 800;
-    }
+  .hero-content {
+    transform: translateY(-14px);
+  }
 
-    .myResume button {
-        font-size: 15px;
-        position: absolute;
-        top: 65%;
-        left: 35%;
-        padding: 7px;
-    }
+  .hero-buttons {
+    width: min(100%, 330px);
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-scroll {
+    bottom: 14px;
+  }
 }
