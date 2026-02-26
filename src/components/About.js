@@ -23,11 +23,14 @@ const About = () => {
     <div className="shortParagraph">
     <img src="https://img.icons8.com/windows/96/FD7E14/user.png" alt="user" /><h3>About Me</h3>
       <p>
-        I am an aspiring web developer passionate in creating user-friendly websites. I am proficient in backend framework Express.js
-        and frontend framework React.js to create dynamic applications. I am also an expert in HTML and CSS. I am currently learning JQuery.
-        I am also competent in using Azure cloud services. Moreover, I am skilled in SQL for managing database systems.
-        I am an inquisitive person always trying to stay in touch with current technologies, ready to rise to new challenges and
-        push myself to explore new environments.
+       I am an Artificial Intelligence Developer specializing in machine learning and natural language processing. I develop and deploy models that power intelligent, real-world applications.
+
+       My core stack includes Python, where I build ML pipelines and AI-driven systems, and Flask for designing lightweight, scalable backend services that bring machine learning models into production. I work with modern ML frameworks to develop, fine-tune, and evaluate models with a strong focus on performance and practical deployment.
+
+       Beyond AI, I have a solid foundation in full-stack development, working with React.js, Express.js, SQL, and cloud services. This enables me to build complete end-to-end systems from data processing and model development to API design and user-facing applications.
+
+       I am driven by curiosity and continuous learning, constantly exploring emerging technologies to build scalable and responsible AI systems that create meaningful impact.
+
       </p>
     </div>
     <div className='LanguagesSection'>
