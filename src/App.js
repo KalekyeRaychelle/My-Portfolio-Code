@@ -11,7 +11,8 @@ function App() {
     <div className="App">
       <LoadingPage/>
       <LandingPage/>
-      <div id='about'>
+      <div className="hero-about-bleed-divider" aria-hidden="true" />
+      <div id='about' className="about-bleed-wrap">
        <About/>
       </div>
       <div id='projects'>

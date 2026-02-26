@@ -1,6 +1,36 @@
 .App {
     text-align: center;
   }
+
+.hero-about-bleed-divider {
+  display: block;
+  width: 100%;
+  height: 5px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(233, 30, 99, 0.25) 15%,
+    rgba(233, 30, 99, 0.7) 35%,
+    #e91e63 50%,
+    rgba(233, 30, 99, 0.7) 65%,
+    rgba(233, 30, 99, 0.25) 85%,
+    transparent 100%
+  );
+}
+
+.about-bleed-wrap {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    #f8d0df 0%,
+    #fce4ec 10%,
+    #fff9fb 35%
+  );
+}
   
   .App-logo {
     height: 40vmin;

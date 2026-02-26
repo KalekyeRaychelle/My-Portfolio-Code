@@ -37,6 +37,13 @@ body::before {
   min-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #fff9fb 0%,
+    #fff9fb 55%,
+    #fce4ec 88%,
+    #f8d0df 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
