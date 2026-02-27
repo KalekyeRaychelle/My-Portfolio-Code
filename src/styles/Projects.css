@@ -1,144 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap');
 
-.Projects {
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 1%;
-    font-family: 'Lato', serif;
-    box-sizing: border-box;
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.Projects h2 {
-    font-size: 36px;
-    text-align: center;
-    background-color: white;
-    position:relative;
-    top:19%;
-    margin-bottom: 10%;
+.projects-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.project {
-    background-color: #f2f2d4;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto 20px; 
-    width: 70%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.projects-kicker {
+  display: block;
+  margin-bottom: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose, #e91e63);
 }
 
-.project h3 {
-    text-align: center;
-    font-size: 24px;
-    margin: auto;
+.projects-title {
+  margin: 0 0 56px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--text, #1a0a10);
 }
 
-.description {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.description p {
-    margin: 10px 0;
+.project-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(194, 24, 91, 0.1);
+  box-shadow: 0 4px 24px rgba(194, 24, 91, 0.06);
+  transition: all 0.3s ease;
 }
 
-.description .link {
-    color: #0455ac;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(194, 24, 91, 0.15);
 }
 
-.description .link:hover {
-    color: #202c3a;
+.project-placeholder {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
-.screenshot {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+.project-placeholder span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
 }
 
-.screenshot img {
-    flex: 1 1 calc(50% - 10px); 
-    max-width: 400px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-.screenshot img:hover{
-    transform: scale(0.8);
+.project-card-body {
+  padding: 24px;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.project-tags {
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.description, .screenshot, .project h3, .Projects h2 {
-    animation:appear  linear;
-    animation-timeline:view();
-    animation-range:entry 0% cover 20%;
+.project-tag {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--pink-light, #fce4ec);
+  color: var(--rose, #e91e63);
+  border: 1px solid rgba(233, 30, 99, 0.15);
 }
 
-@media(max-width:768px){
-        .Projects h2{
-            font-size: 30px;
-            top:100px;
-            margin-bottom: 1%;
-        }
-            
-        .project {
-            position: relative;
-            top:95px;
-            margin-top:1%;
-            width: 80%;
-            padding: 15px;
-            margin: 20px auto 20px; 
-            border-radius: 19px;
-        }
+.project-card-title {
+  margin: 0 0 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text, #1a0a10);
+}
 
-        .project h3 {
-            margin-top: 5px;;
-            font-size: 19px;
-            margin-bottom:5px;
-        }
+.project-card-description {
+  margin: 0 0 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.72;
+  color: var(--muted, #7a4a5a);
+}
 
-        .description {
-            font-size: 14px;
-            line-height: 1.2;
-            color: #333;
-        }
+.project-github-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--rose, #e91e63);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(233, 30, 99, 0.3);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
 
-        .description p {
-            margin: 6px 0;
-        }
+.project-github-link:hover {
+  color: var(--pink-dark, #880e4f);
+  border-color: var(--pink-dark, #880e4f);
+}
 
-        .description .link {
-            
-            font-size: small;
-        }
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-
-        .screenshot {
-            
-            margin-top: 10px;
-        }
-
-        .screenshot img {
-            width: 80%;
-            margin-bottom:5px;
-            }
-        .screenshot img:hover{
-            transform: scale(0.9);
-        }
+@media (max-width: 580px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
