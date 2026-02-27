@@ -11,7 +11,7 @@ const Projects = () => {
       title: "Paul's Pizza",
       description:
         'A full restaurant website for a pizza shop in Mombasa - featuring menus, reservations, and a beautiful food-forward design.',
-      tags: ['React.js', 'CSS', 'Responsive'],
+      tags: ['React.js', 'CSS'],
       gradient: 'linear-gradient(135deg, #fff3e0 0%, #ffb74d 50%, #e65100 100%)',
      
       githubUrl: 'https://github.com/KalekyeRaychelle/PaulsPizza'
@@ -21,7 +21,7 @@ const Projects = () => {
       title: 'Legal Query Classifier',
       description:
         'Classifies legal queries using roBERTa and maps them to the relevant Kenyan Act, helping users understand which legislation applies to their situation.',
-      tags: ['Python', 'Flask', 'NLP', 'ML'],
+      tags: ['Python', 'ML'],
       gradient: 'linear-gradient(135deg, #fce4ec 0%, #f48fb1 50%, #880e4f 100%)',
   
       githubUrl: 'https://github.com/KalekyeRaychelle/Legal-Query-Classifier'
@@ -31,7 +31,7 @@ const Projects = () => {
       title: 'Uhaki Legal Chatbot',
       description:
         'An AI-powered legal chatbot for the Kenyan context. Uses a RAG pipeline with vector databases storing Kenyan Acts, answered by a Qwen 3-8B LLM.',
-      tags: ['Python', 'RAG', 'Vector DB', 'Qwen 3-8B', 'LLM'],
+      tags: ['Python', 'RAG', 'Vector DB', 'Qwen 3-8B', 'LLM', 'Kenyan Law','NLP',' Flask'],
       gradient: 'linear-gradient(135deg, #e8f5e9 0%, #66bb6a 50%, #1b5e20 100%)',
      
       githubUrl: 'https://github.com/raychelleKalekye/Uhaki-legal-chatbot'
@@ -75,7 +75,7 @@ const Projects = () => {
 
   return (
     <section
-      ref={sectionRef}
+      ref={sectionRef} id= 'projects'
       className={`projects-section${isVisible ? ' visible' : ''}`}
     >
       <span className="projects-kicker">My Work</span>

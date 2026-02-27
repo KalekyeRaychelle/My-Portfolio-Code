@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@400;500&display=swap');
 
 .contact-section {
+  box-sizing: border-box;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -66,6 +67,7 @@
 }
 
 .contact-mailto {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   gap: 10px;

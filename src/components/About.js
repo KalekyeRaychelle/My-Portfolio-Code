@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <section
-      ref={sectionRef}
+      ref={sectionRef} id='about'
       className={`about-section${isVisible ? ' visible' : ''}`}
     >
       <div className="about-left">

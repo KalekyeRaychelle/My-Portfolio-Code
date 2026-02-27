@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <section
-      ref={sectionRef}
+      ref={sectionRef} id='contact'
       className={`contact-section${isVisible ? ' visible' : ''}`}
     >
       <span className="contact-kicker">Get In Touch</span>
