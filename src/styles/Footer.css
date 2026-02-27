@@ -1,59 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-.Footer{
-   
-    font-family: 'Lato', serif;
-    display: flex;
-    flex-direction: row;
-    margin-top:5%;
-    align-items:center;
-}
-.rightSideFooter p{
-  color:#de430f;
-}
-.socialMedia{
-    position:relative;
-    left:25%;
-    display:flex;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+.site-footer {
+  width: 100%;
+  max-width: none;
+  padding: 48px 24px 36px;
+  text-align: center;
+  border-top: 1px solid rgba(194, 24, 91, 0.12);
+  background: linear-gradient(to bottom, #fce4ec 0%, #fff9fb 60%);
 }
 
-.socialMedia a{
-    font-size: 40px;
-    margin-left: 2%;
-    margin-right:15%;
-    color:#333;
-    transition: transform 0.2s, color 0.2s;
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(194, 24, 91, 0.25);
+  background: transparent;
+  color: #7a4a5a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
 }
-.socialMedia a:hover{
-    color:#de430f; 
-    transform: scale(1.1); 
-}
-@media(max-width:768px){
-    .Footer{
-        margin-top:35%;
-        width:auto;
-    }
-    .socialMedia {
-        display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        gap: 10px;
-        margin-top: 20px; 
-        position: static;
-        position:relative;
-        left:10%;
-        margin-bottom:1%;
-        
-    }
-   
-    .socialMedia a {
-        font-size: 30px; 
-        color: #333;
-        transition: color 0.2s, transform 0.2s;
-        margin-bottom: 2%;
-    }
 
-    .socialMedia a:hover {
-        color: #d06135;
-        transform: scale(1.1);
-    }
+.back-to-top:hover {
+  background: #fce4ec;
+  border-color: #e91e63;
+  color: #e91e63;
+  transform: translateY(-2px);
+}
+
+.footer-copy {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #7a4a5a;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
 }
