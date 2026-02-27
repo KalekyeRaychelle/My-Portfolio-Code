@@ -1,51 +1,103 @@
-import React,{useRef}from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/Contact.css';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    const sectionNode = sectionRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    emailjs
-      .sendForm('service_l3mqunq', 'template_tbvxqok', form.current, {
-        publicKey: 'sUpQhrO6QcMQwtF4I',
-      })
-      .then(
-        () => {
-          window.alert('Your email has been sent');
-          form.current.reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+    if (sectionNode) {
+      observer.observe(sectionNode);
+    }
+
+    return () => {
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
+      }
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <div className='Contact'>
-        <div className='emailForm'>
-            <p>Send an email.</p>
-            <form ref={form} onSubmit={sendEmail}>
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+    <section
+      ref={sectionRef}
+      className={`contact-section${isVisible ? ' visible' : ''}`}
+    >
+      <span className="contact-kicker">Get In Touch</span>
+      <h2 className="contact-title">
+        Let&apos;s work
+        <em>together</em>
+      </h2>
+      <div className="contact-card">
+        <div className="contact-inner">
+          <p className="contact-subtext">
+            Whether you have a project in mind, want to collaborate on AI
+            research, or just want to connect, my inbox is always open.
+          </p>
 
-              <label htmlFor="subject">Subject:</label>
-              <input type="text" id="subject" name="subject" required />
+          <a
+            className="contact-mailto"
+            href="mailto:kalekyeraychelle@gmail.com"
+            aria-label="Email Raychelle Kalekye"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,12 2,6" />
+            </svg>
+            <span>kalekyeraychelle@gmail.com</span>
+          </a>
 
-              <label htmlFor="message">Message:</label>
-              <textarea rows="6" id="message" name="message" placeholder="Enter message..." required></textarea>
+          <div className="contact-divider" aria-hidden="true" />
 
-              <button type="submit">SUBMIT</button>
-            </form>
+          <div className="contact-socials">
+            <a
+              href="https://www.linkedin.com/in/raychelle-kalekye-0825602ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/KalekyeRaychelle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.kaggle.com/raychellekalekye"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kaggle
+            </a>
+          </div>
 
+         
         </div>
-       
-
       </div>
-
-  )
-}
+    </section>
+  );
+};
 
 export default Contact;
